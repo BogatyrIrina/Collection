@@ -1,12 +1,14 @@
-public class Mechanic {
+public class Mechanic<T extends Transport> {
     private String name;
     private String surname;
     private String company;
+    private MachineTypes machineTypes;
 
-    public Mechanic(String name, String surname, String company) {
+    public Mechanic(String name, String surname, String company, MachineTypes machineTypes) {
         this.name = name;
         this.surname = surname;
         this.company = company;
+        this.machineTypes = machineTypes;
     }
 
     public String getName() {
@@ -31,6 +33,14 @@ public class Mechanic {
 
     public void setCompany(String company) {
         this.company = company;
+    }
+
+    public MachineTypes getMachineTypes() {
+        return machineTypes;
+    }
+
+    public void setMachineTypes(MachineTypes machineTypes) {
+        this.machineTypes = machineTypes;
     }
 
     public void carryOutMaintenance (){

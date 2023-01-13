@@ -27,16 +27,9 @@ public class Main {
                 "Категория D", 20));
 
         List<Mechanic> mechanics = new ArrayList<>();
-        mechanics.add(new Mechanic("Семен", "Семенов", "Автоплюс"));
-        mechanics.add(new Mechanic("Степан", "Степанов", "Автогарант"));
-        mechanics.add(new Mechanic("Антон", "Антонов", "Автоэкспресс"));
-
-
-
-
-
-
-
+        mechanics.add(new Mechanic("Семен", "Семенов", "Автоплюс", MachineTypes.CAR));
+        mechanics.add(new Mechanic("Степан", "Степанов", "Автогарант", MachineTypes.BUS));
+        mechanics.add(new Mechanic("Антон", "Антонов", "Автоэкспресс", MachineTypes.TRUCK));
 
 
 
