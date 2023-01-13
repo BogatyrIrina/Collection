@@ -1,9 +1,11 @@
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Transport<T extends Driver> {
     private final String brand;
     private final String model;
     private double engineCapacity;
+    List<Mechanic> listMechanic;
 
     public Transport(String brand, String model, double engineCapacity) {
         this.brand = brand;
@@ -29,11 +31,18 @@ public abstract class Transport<T extends Driver> {
         return engineCapacity;
     }
 
+    public List<Mechanic> getListMechanic() {
+        return listMechanic;
+    }
+
+
     public void drive(T driver) {
         System.out.println("Водитель ФИО: " + driver.getFirstName() + " " + driver.getMiddleName() + " "
                 + driver.getLastName() + ". Управляет транспортным средством " + getBrand() + " " + getModel() +
                 ". Будет учавстовать в заезде. ");
     }
+
+    public abstract void repair ();
 
     public void printTransport(){
         System.out.println("Марка автомобиля " + getBrand() +

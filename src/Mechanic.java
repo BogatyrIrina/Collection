@@ -1,4 +1,4 @@
-public class Mechanic<T extends Transport> {
+public class Mechanic {
     private String name;
     private String surname;
     private String company;
