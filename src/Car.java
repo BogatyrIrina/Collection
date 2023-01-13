@@ -36,8 +36,8 @@ public class Car extends Transport<DriverB> implements Competing {
 
     @Override
     public void repair() {
-        for (Mechanic m: getMechanics()) {
-            if (m.getMachineType() == MachineTypes.CAR) {
+        for (Mechanic m: getListMechanic()) {
+            if (m.getMachineTypes() == MachineTypes.CAR) {
                 m.fixTheCar();
                 System.out.println("Починить машину");
             }
