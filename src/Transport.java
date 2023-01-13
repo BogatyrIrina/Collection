@@ -5,7 +5,7 @@ public abstract class Transport<T extends Driver> {
     private final String brand;
     private final String model;
     private double engineCapacity;
-    List<Mechanic> listMechanic;
+    private List<Mechanic> listMechanic;
 
     public Transport(String brand, String model, double engineCapacity) {
         this.brand = brand;

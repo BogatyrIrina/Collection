@@ -35,6 +35,16 @@ public class Bus extends Transport<DriverC> implements Competing {
     }
 
     @Override
+    public void repair() {
+        for (Mechanic m: getListMechanic()) {
+            if (m.getMachineTypes() == MachineTypes.CAR) {
+                m.fixTheCar();
+                System.out.println("Починить машину");
+            }
+        }
+    }
+
+    @Override
     public boolean service() {
         System.out.println("Автобус " + getBrand() + getModel() + " в диагностике не требуется.");
         return true;

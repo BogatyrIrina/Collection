@@ -37,6 +37,16 @@ public class Truck extends Transport<DriverD> implements Competing{
     }
 
     @Override
+    public void repair() {
+        for (Mechanic m: getListMechanic()) {
+            if (m.getMachineTypes() == MachineTypes.CAR) {
+                m.fixTheCar();
+                System.out.println("Починить машину");
+            }
+        }
+    }
+
+    @Override
     public boolean service() {
         return Math.random() > 0.75;
     }
