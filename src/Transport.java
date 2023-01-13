@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -5,7 +6,7 @@ public abstract class Transport<T extends Driver> {
     private final String brand;
     private final String model;
     private double engineCapacity;
-    private List<Mechanic> listMechanic;
+    private List<Mechanic> listMechanic = new ArrayList<>();
 
     public Transport(String brand, String model, double engineCapacity) {
         this.brand = brand;

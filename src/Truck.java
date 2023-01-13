@@ -39,7 +39,7 @@ public class Truck extends Transport<DriverD> implements Competing{
     @Override
     public void repair() {
         for (Mechanic m: getListMechanic()) {
-            if (m.getMachineTypes() == MachineTypes.CAR) {
+            if (m.getMachineTypes() == MachineTypes.TRUCK) {
                 m.fixTheCar();
                 System.out.println("Починить машину");
             }
